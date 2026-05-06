@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Wave — крафтове пиво</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        Лабораторна робота 1: HTML
+        У цьому файлі створена структура сайту: шапка, меню, секції,
+        картки товарів, форма замовлення та підвал.
+    -->
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <span class="logo-icon">🍺</span>
+                Craft Wave
+            </a>
+
+            <button class="burger" id="burger" aria-label="Відкрити меню">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">Про нас</a></li>
+                <li><a href="#types">Види пива</a></li>
+                <li><a href="#process">Виробництво</a></li>
+                <li><a href="#order">Замовлення</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <p class="subtitle">Маленька незалежна пивоварня</p>
+                <h1>Крафтове пиво з характером</h1>
+                <p class="hero-text">
+                    Варимо IPA, стаути, лагери та пшеничне пиво малими партіями.
+                    Без поспіху, з натуральними інгредієнтами та уважністю до смаку.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#types" class="btn primary">Переглянути смаки</a>
+                    <a href="#order" class="btn secondary">Залишити заявку</a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <p class="hero-card-title">Смак місяця</p>
+                <h2>Hazy Mango IPA</h2>
+                <p>Соковита IPA з ароматом манго, цитрусу та легкою гірчинкою.</p>
+                <span class="badge">Новинка</span>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="section about" id="about">
+            <div class="section-title">
+                <p class="subtitle">Про пивоварню</p>
+                <h2>Ми робимо пиво, яке хочеться обговорювати</h2>
+            </div>
+
+            <div class="about-grid">
+                <article class="info-card">
+                    <h3>Натуральна сировина</h3>
+                    <p>
+                        Використовуємо солод, хміль, дріжджі та воду без зайвих домішок.
+                        Кожен рецепт тестується перед запуском у продаж.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Малі партії</h3>
+                    <p>
+                        Ми не женемося за масовістю. Невеликі варки дозволяють краще
+                        контролювати якість, аромат і насиченість смаку.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Авторські рецепти</h3>
+                    <p>
+                        У нашому меню є класичні стилі та експериментальні сорти:
+                        від легкого лагера до темного шоколадного стаута.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section types" id="types">
+            <div class="section-title">
+                <p class="subtitle">Асортимент</p>
+                <h2>Популярні види крафтового пива</h2>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Усі</button>
+                <button class="filter-btn" data-filter="light">Світлі</button>
+                <button class="filter-btn" data-filter="dark">Темні</button>
+                <button class="filter-btn" data-filter="fruit">Фруктові</button>
+            </div>
+
+            <div class="beer-grid">
+                <article class="beer-card" data-category="light">
+                    <img src="images/golden-lager.png" alt="Golden Lager" class="beer-img">
+                    <div class="beer-emoji">🌾</div>
+                    <h3>Golden Lager</h3>
+                    <p>Легке світле пиво з чистим смаком, м'якою гірчинкою та зерновим ароматом.</p>
+                    <div class="beer-meta">
+                        <span>4.8%</span>
+                        <span>IBU 18</span>
+                    </div>
+                </article>
+
+                <article class="beer-card" data-category="light">
+                    <img src="images/citrus-ipa.png" alt="Citrus IPA" class="beer-img">
+                    <div class="beer-emoji">🍋</div>
+                    <h3>Citrus IPA</h3>
+                    <p>Ароматна IPA з нотами грейпфрута, апельсина та виразною хмелевою гірчинкою.</p>
+                    <div class="beer-meta">
+                        <span>6.2%</span>
+                        <span>IBU 55</span>
+                    </div>
+                </article>
+
+                <article class="beer-card" data-category="dark">
+                    <img src="images/dark-stout.png" alt="Dark Stout" class="beer-img">
+                    <div class="beer-emoji">🍫</div>
+                    <h3>Dark Stout</h3>
+                    <p>Темне пиво з відтінками кави, шоколаду, карамелі та щільним післясмаком.</p>
+                    <div class="beer-meta">
+                        <span>5.9%</span>
+                        <span>IBU 35</span>
+                    </div>
+                </article>
+
+                <article class="beer-card" data-category="dark">
+                    <img src="images/coffee-porter.png" alt="Coffee Porter" class="beer-img">
+                    <div class="beer-emoji">☕</div>
+                    <h3>Coffee Porter</h3>
+                    <p>Насичений портер із кавовим ароматом, легкою солодкістю та оксамитовою текстурою.</p>
+                    <div class="beer-meta">
+                        <span>6.5%</span>
+                        <span>IBU 30</span>
+                    </div>
+                </article>
+
+                <article class="beer-card" data-category="fruit">
+                    <img src="images/mango-hazy-ipa.png" alt="Mango Hazy IPA" class="beer-img">
+                    <div class="beer-emoji">🥭</div>
+                    <h3>Mango Hazy IPA</h3>
+                    <p>Соковите пиво з тропічними нотами, м'якою мутністю та фруктовим ароматом.</p>
+                    <div class="beer-meta">
+                        <span>5.7%</span>
+                        <span>IBU 40</span>
+                    </div>
+                </article>
+
+                <article class="beer-card" data-category="fruit">
+                    <img src="images/cherry-sour.png" alt="Cherry Sour" class="beer-img">
+                    <div class="beer-emoji">🍒</div>
+                    <h3>Cherry Sour</h3>
+                    <p>Кислуватий ель із вишнею, яскравим кольором та освіжаючим післясмаком.</p>
+                    <div class="beer-meta">
+                        <span>4.5%</span>
+                        <span>IBU 12</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section process" id="process">
+            <div class="section-title">
+                <p class="subtitle">Як ми працюємо</p>
+                <h2>Процес створення пива</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span>01</span>
+                    <h3>Підбір рецепту</h3>
+                    <p>Обираємо стиль, баланс солоду, хмелю, міцності та аромату.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>02</span>
+                    <h3>Варіння</h3>
+                    <p>Контролюємо температуру, час кип'ятіння та внесення хмелю.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>03</span>
+                    <h3>Ферментація</h3>
+                    <p>Дріжджі формують смак, аромат і міцність майбутнього пива.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span>04</span>
+                    <h3>Дегустація</h3>
+                    <p>Перевіряємо якість партії перед розливом і продажем.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section calculator" id="calculator">
+            <div class="calculator-box">
+                <div>
+                    <p class="subtitle">Міні-калькулятор</p>
+                    <h2>Порахуй вартість дегустаційного набору</h2>
+                </div>
+
+                <div class="calc-panel">
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Golden Lager</strong>
+                            <span>85 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="85" min="0" max="24" value="0" aria-label="Кількість Golden Lager">
+                    </div>
+
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Citrus IPA</strong>
+                            <span>105 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="105" min="0" max="24" value="0" aria-label="Кількість Citrus IPA">
+                    </div>
+
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Dark Stout</strong>
+                            <span>110 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="110" min="0" max="24" value="0" aria-label="Кількість Dark Stout">
+                    </div>
+
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Coffee Porter</strong>
+                            <span>115 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="115" min="0" max="24" value="0" aria-label="Кількість Coffee Porter">
+                    </div>
+
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Mango Hazy IPA</strong>
+                            <span>120 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="120" min="0" max="24" value="0" aria-label="Кількість Mango Hazy IPA">
+                    </div>
+
+                    <div class="beer-calc-row">
+                        <div>
+                            <strong>Cherry Sour</strong>
+                            <span>100 грн / пляшка</span>
+                        </div>
+                        <input type="number" class="beer-count" data-price="100" min="0" max="24" value="0" aria-label="Кількість Cherry Sour">
+                    </div>
+
+                    <p class="total">Пляшок: <span id="totalBottles">0</span></p>
+                    <p class="total">Разом: <span id="totalPrice">0 грн</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section order" id="order">
+            <div class="section-title">
+                <p class="subtitle">Заявка</p>
+                <h2>Замовити дегустаційний сет</h2>
+            </div>
+
+            <form class="order-form" id="orderForm">
+                <div class="form-row">
+                    <label for="name">Ваше ім'я</label>
+                    <input type="text" id="name" placeholder="Наприклад: Андрій">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" placeholder="+380...">
+                </div>
+
+                <button type="submit" class="btn primary form-btn">Надіслати заявку</button>
+                <p class="form-message" id="formMessage"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Надмірне споживання алкоголю шкодить здоров'ю. 18+</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
